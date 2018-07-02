@@ -33,6 +33,10 @@ public class ShovelDetails {
 	private String sourceExchangeKey;
 	@JsonProperty("src-queue")
 	private String sourceQueue;
+	@JsonProperty("prefetch-count")
+	private int prefetchCount;
+	@JsonProperty("delete-after")
+	private long deleteAfter;
 
 	@JsonProperty("dest-uri")
 	private String destinationURI;
@@ -95,6 +99,22 @@ public class ShovelDetails {
 
 	public void setSourceQueue(String sourceQueue) {
 		this.sourceQueue = sourceQueue;
+	}
+
+	public int getPrefetchCount() {
+		return prefetchCount;
+	}
+
+	public void setPrefetchCount(long prefetchCount) {
+		this.prefetchCount = prefetchCount;
+	}
+
+	public long getDeleteAfter() {
+		return deleteAfter;
+	}
+
+	public void setDeleteAfter(int deleteAfter) {
+		this.deleteAfter = deleteAfter;
 	}
 
 	public String getDestinationURI() {
